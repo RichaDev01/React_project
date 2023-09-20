@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF7ED;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  padding-block: 10px;
+}
+
+header .site-logo {
+  color: rgb(14, 7, 7);
+  margin-right: auto;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 25px;
+}
+
+header a {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 600;
+  padding: 5px 20px;
+}
+
+header a:hover {
+  color: #161616;
+  text-decoration: underline;
+}
+
+
+
+/* STYLING UP OUR BODY  */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  overflow-y: scroll;
+  background: #eee;
+}
+
+/* STYLING UP OUR HABIT TRACKER CONTAINER  */
+
+.container {
+  max-width: 150vh;
+  margin: 1px auto;
+  overflow: auto;
+  min-height: 250px;
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #081212;
+  color: #fff;
+   margin-top: 1%; 
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* STYLING UP OUR HEADER SECTION  */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* STYLING UP OUR BUTTONS  */
+
+.btn {
+  display: inline-block;
+  background: green;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* STYLING UP A PARTICULAR HABIT  */
+
+.habit {
+  background: #b3b0b031;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.habit h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.habit.reminder {
+  border-left: 5px solid green;
+}
+
+/* STYLING UP OUR INPUT FORM  */
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-check input {
+  flex: 2;
+  height: 20px;
+}
+
+/* STYLING UP OUR WEEK DAYS  */
+
+.days{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 90px;
+  padding-left: 10%;
+  margin-right: 60px;
+  gap: 3px;
+  flex-direction: row;
+}
+
+.days p{
+  margin: 10px;
+}
+
+
+.dayStatus{
+  display: flex;
+  position: absolute;
+  margin-left: 80px;
+  padding-left: 10%;
+}
+
+.dayStatus p{
+  margin-right: 90%;
+}
+
+/* STYLING UP OUR CHECKBOXES */
+
+.toggle {
+  position: relative;
+  box-sizing: border-box;
+}
+.toggle input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+.toggle label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  box-sizing: border-box;
+}
+.toggle label:before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  margin-right: 5px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: inline-block;
+  transition: 0.2s ease-in;
+}
+.toggle label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 14px;
+  z-index: 2;
+  width: 16px;
+  height: 0px;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  transform: translateY(0px) rotate(0deg);
+  box-sizing: border-box;
+  transition: 0.2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+.toggle input[type="checkbox"]:checked + label:after {
+  height: 8px;
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+.toggles{
+  margin-left: 20%;
+  display: flex;
+  flex-direction: row;
+}
